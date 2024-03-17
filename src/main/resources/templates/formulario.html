@@ -7,6 +7,7 @@
 <body>
 <h1>Formulario de persona</h1>
 <form th:object="${persona}" th:action="${action}" method="post">
+    <input type="hidden" th:field="*{id}">
     <label>Nombre: <input type="text" th:field="*{nombre}"/></label><br/>
     <label>Edad: <input type="number" th:field="*{edad}"/></label><br/>
     <button type="submit">Guardar</button>
